@@ -15,6 +15,7 @@
 
 
         <EditText
+            android:background="@drawable/et"
             android:id="@+id/editText3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,16 +23,22 @@
             android:hint="Inpute your Name"
             android:inputType="textPersonName"
             android:selectAllOnFocus="true"
-
+            android:padding="5dp"
+            android:textColorHint="#AAAAAA"
+            android:layout_marginBottom="10dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
         <EditText
+            android:background="@drawable/et"
             android:id="@+id/editText4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Inpute your password "
             android:inputType="numberPassword"
+            android:maxLines="1"
+            android:textColorHint="#AAAAAA"
+            android:padding="5dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
     </LinearLayout>
 
