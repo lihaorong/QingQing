@@ -4,42 +4,91 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:background="@drawable/sign_in_bg"
+    android:background="@drawable/sign_in_background"
     android:fitsSystemWindows="true">
-
-    <LinearLayout
-        android:orientation="vertical"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp">
-
-
+        android:layout_gravity="center"
+        android:text="登录到微信"
+        android:textColor="#fff"/>
+    <!--半透明的登录框-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="800px"
+        android:layout_height="480px"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/sign_in_block">
+    <!--用户名-->
+    <LinearLayout
+        android:layout_width="700px"
+        android:layout_height="120px"
+        android:background="@drawable/sign_in_username_block"
+        android:layout_gravity="center_horizontal"
+        android:gravity="right"
+        android:layout_marginTop="70px">
         <EditText
-            android:background="@drawable/et"
-            android:id="@+id/editText3"
-            android:layout_width="match_parent"
+            android:background="@null"
+            android:id="@+id/username_text"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="120px"
             android:ems="10"
-            android:hint="Inpute your Name"
+            android:hint="Email"
             android:inputType="textPersonName"
-            android:selectAllOnFocus="true"
-            android:padding="5dp"
-            android:textColorHint="#AAAAAA"
-            android:layout_marginBottom="10dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+            android:textColorHint="#ffffff" />
+        </LinearLayout>
+        <!--密码框-->
+        <LinearLayout
+            android:layout_width="700px"
+            android:layout_height="120px"
+            android:background="@drawable/sign_in_password_block"
+            android:layout_gravity="center_horizontal"
+            android:gravity="right"
+            android:layout_marginTop="50px">
 
-        <EditText
-            android:background="@drawable/et"
-            android:id="@+id/editText4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Inpute your password "
-            android:inputType="numberPassword"
-            android:maxLines="1"
-            android:textColorHint="#AAAAAA"
-            android:padding="5dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+            <EditText
+                android:id="@+id/password_text"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Password"
+                android:layout_marginLeft="150px"
+                android:textColorHint="#ffffff"
+                android:inputType="numberPassword" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--登录注册按键-->
+    <LinearLayout
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:layout_marginTop="70px">
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="360px"
+            android:layout_height="100px"
+            android:layout_gravity="left"
+            android:text="注册账号"
+            android:textColor="#fff"
+            android:layout_marginRight="35px"
+            android:background="@drawable/sign_in_register_btn"/>
+        <Button
+            android:id="@+id/btn_signin"
+            android:layout_width="360px"
+            android:layout_height="100px"
+            android:layout_gravity="left"
+            android:text="登录-》"
+            android:textColor="#fff"
+            android:layout_marginLeft="35px"
+            android:background="@drawable/sign_in_confirm_btn" />
     </LinearLayout>
 
 

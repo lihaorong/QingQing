@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@drawable/sign_in_background"
+    android:fitsSystemWindows="true">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="注册您的微信账号"
+        android:textColor="#fff"/>
+    <!--半透明的登录框-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="800px"
+        android:layout_height="480px"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/sign_in_block">
+        <!--用户名-->
+        <LinearLayout
+            android:layout_width="700px"
+            android:layout_height="120px"
+            android:background="@drawable/sign_in_username_block"
+            android:layout_gravity="center_horizontal"
+            android:gravity="right"
+            android:layout_marginTop="70px">
+            <EditText
+                android:background="@null"
+                android:id="@+id/register_username_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="120px"
+                android:ems="10"
+                android:hint="注册账号"
+                android:inputType="textPersonName"
+                android:textColorHint="#ffffff" />
+        </LinearLayout>
+        <!--密码框-->
+        <LinearLayout
+            android:layout_width="700px"
+            android:layout_height="120px"
+            android:background="@drawable/sign_in_password_block"
+            android:layout_gravity="center_horizontal"
+            android:gravity="right"
+            android:layout_marginTop="50px">
+
+
+            <EditText
+                android:id="@+id/register_password_text"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Password"
+                android:layout_marginLeft="150px"
+                android:textColorHint="#ffffff"
+                android:inputType="numberPassword" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
