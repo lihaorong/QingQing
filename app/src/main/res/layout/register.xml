@@ -37,7 +37,8 @@
                 android:ems="10"
                 android:hint="注册账号"
                 android:inputType="textPersonName"
-                android:textColorHint="#ffffff" />
+                android:textColorHint="#ffffff"
+                android:textColor="#e4e3e3"/>
         </LinearLayout>
         <!--密码框-->
         <LinearLayout
@@ -60,11 +61,24 @@
                 android:hint="Password"
                 android:layout_marginLeft="150px"
                 android:textColorHint="#ffffff"
-                android:inputType="numberPassword" />
+                android:inputType="numberPassword"
+                android:textColor="#e4e3e3"
+                />
         </LinearLayout>
 
-
     </LinearLayout>
+    <Button
+        android:id="@+id/register_btn_confirm"
+        android:layout_width="800px"
+        android:layout_height="132px"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:text="注册并登录"
+        android:paddingTop="10dp"
+        android:background="@drawable/xml_register_btn"
+        />
 
 
 </LinearLayout>
