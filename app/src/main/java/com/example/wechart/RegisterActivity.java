@@ -42,15 +42,21 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 StringUserName = editTextUserName.getText().toString();
                 StringPassword = editTextPassword.getText().toString();
-                Toast.makeText(RegisterActivity.this,"注册成功,点击登录",Toast.LENGTH_SHORT).show();
-                //注册一个intent存放数据
-                Intent intentSignin  = new Intent();
-                intentSignin.putExtra("returnUserName",StringUserName);
-                intentSignin.putExtra("returnPassword",StringPassword);
-                setResult(RESULT_OK,intentSignin);
-                finish();
+                if("".equals(StringUserName)){
+                    Toast.makeText(RegisterActivity.this,"用户名不能为空",Toast.LENGTH_SHORT).show();
+                }else if("".equals(StringPassword)){
+                    Toast.makeText(RegisterActivity.this,"密码不能为空",Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(RegisterActivity.this, "注册成功,点击登录", Toast.LENGTH_SHORT).show();
+                    //注册一个intent存放数据
+                    Intent intentSignin = new Intent();
+                    intentSignin.putExtra("returnUserName", StringUserName);
+                    intentSignin.putExtra("returnPassword", StringPassword);
+                    setResult(RESULT_OK, intentSignin);
+                    finish();
+                }
 
-            }
+                }
         });
     }
 }
