@@ -40,6 +40,23 @@ public class signInActivity extends AppCompatActivity {
                 Intent intent =  new Intent(signInActivity.this,RegisterActivity.class);
                 Toast.makeText(signInActivity.this, "欢迎注册", Toast.LENGTH_SHORT).show();
                 startActivityForResult(intent,1);
+        //
+
+            }
+        });
+
+        Button BtnSignIn = (Button)findViewById(R.id.btn_signin);
+        final EditText signUserName = (EditText)findViewById(R.id.username_text);
+        final EditText signPassword = (EditText)findViewById(R.id.password_text);
+        BtnSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if("".equals(signUserName.getText().toString())||"".equals(signPassword.getText().toString())) {
+                    Toast.makeText(signInActivity.this, "请正确输入账号和密码", Toast.LENGTH_SHORT).show();
+                }else {
+                    Intent intentSignIn = new Intent(signInActivity.this, MainActivity.class);
+                    startActivity(intentSignIn);
+                }
             }
         });
     }
