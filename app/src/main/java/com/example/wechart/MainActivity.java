@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -32,6 +33,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private List<View> views;
 
+    private List<Fruit> fruitList = new ArrayList<>();
+    private ListView listView;
+    private FruitAdapter fruitAdapter;
+
+
 
 
     @Override
@@ -53,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             );getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
         initView();
+        initFruits();
         initEvent();
 
 
@@ -82,6 +89,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         View page_01 = View.inflate(MainActivity.this,R.layout.table01,null);
         View page_02 = View.inflate(MainActivity.this,R.layout.table02,null);
         View page_03 = View.inflate(MainActivity.this,R.layout.table03,null);
+
+        listView=(ListView)page_02.findViewById(R.id.list_view);
+        FruitAdapter fruitAdapter = new FruitAdapter(MainActivity.this, R.layout.fruit_item, fruitList);
+        listView.setAdapter(fruitAdapter);
 
         views = new ArrayList<View>();
         views.add(page_01);
@@ -158,6 +169,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onPageScrollStateChanged(int arg0) {
 
+    }
+    private void initFruits(){
+        for (int i = 0;i<2;i++){
+            Fruit apple = new Fruit("APPLE",R.mipmap.apple_pic);
+            fruitList.add(apple);
+            Fruit banana = new Fruit("Banana",R.mipmap.banana_pic);
+            fruitList.add(banana);
+            Fruit orange = new Fruit("orange",R.mipmap.orange_pic);
+            fruitList.add(orange);
+            Fruit watermelon = new Fruit("Watermelon",R.mipmap.watermelon_pic);
+            fruitList.add(watermelon);
+            Fruit pear = new Fruit("Pear",R.mipmap.pear_pic);
+            fruitList.add(pear);
+            Fruit grap = new Fruit("Grap",R.mipmap.grape_pic);
+            fruitList.add(grap);
+            Fruit pineapple = new Fruit("Prinapple",R.mipmap.pineapple_pic);
+            fruitList.add(pineapple);
+            Fruit strawberry = new Fruit("Strawberry",R.mipmap.strawberry_pic);
+            fruitList.add(strawberry);
+            Fruit cherry = new Fruit("Cherry",R.mipmap.cherry_pic);
+            fruitList.add(cherry);
+            Fruit mango = new Fruit("Mango",R.mipmap.mango_pic);
+            fruitList.add(mango);
+        }
     }
 
 

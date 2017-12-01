@@ -32,6 +32,5 @@
         android:text="搜索"
         android:textColor="#fff"
         android:textSize="15dp"
-
-        android:textStyle="italic" />
+        />
 </LinearLayout>
