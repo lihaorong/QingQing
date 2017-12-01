@@ -1,6 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:background="@drawable/msg_title_bar">
+
+        <Button
+            android:id="@+id/send_msg_return_main"
+            android:background="@drawable/xml_search_return_btn"
+            android:layout_marginTop="60px"
+            android:layout_width="140px"
+            android:layout_height="140px"
+            />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:background="@drawable/send_msg_bar"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical"
+        >
+        <EditText
+            android:id="@+id/et_sent_msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Type something here"
+            android:layout_marginLeft="160px"
+            android:background="@null"
+
+            android:maxLines="2"/>
+        <Button
+            android:id="@+id/send"
+            android:layout_marginTop="10px"
+            android:layout_width="150px"
+            android:layout_height="100px"
+            android:layout_gravity="right|center_vertical"
+            android:background="@drawable/xml_send_btn"
+            android:layout_marginRight="10px"
+            android:text="发送"
+            android:textColor="#fff"/>
+
+    </LinearLayout>
+
 
 </LinearLayout>

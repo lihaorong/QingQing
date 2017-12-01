@@ -1,5 +1,6 @@
 package com.example.wechart;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.support.v4.view.ViewPager;
@@ -7,6 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -98,6 +100,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         listViewMsg=(ListView)page_01.findViewById(R.id.list_view_msg);
         FruitAdapterMsg fruitAdapterMsg = new FruitAdapterMsg(MainActivity.this,R.layout.fruit_item_msg,fruitListMsg);
         listViewMsg.setAdapter(fruitAdapterMsg);
+        listViewMsg.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Fruit fruit=fruitListMsg.get(position);
+                Intent intentToSendMsg = new Intent(MainActivity.this,sendMsgActivity.class);
+                startActivity(intentToSendMsg);
+            }
+        });
 
         listView=(ListView)page_02.findViewById(R.id.list_view);
         FruitAdapter fruitAdapter = new FruitAdapter(MainActivity.this, R.layout.fruit_item, fruitList);

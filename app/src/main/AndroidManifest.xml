@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".searchActivity"></activity>
+        <activity android:name=".searchActivity" />
+        <activity android:name=".sendMsgActivity"></activity>
     </application>
 
 </manifest>
