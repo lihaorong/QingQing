@@ -6,6 +6,7 @@
     android:background="@drawable/bottom_block">
     <!--消息-->
     <LinearLayout
+        android:id="@+id/LinOut_msg"
         android:layout_width="60px"
         android:layout_marginTop="20px"
         android:layout_height="wrap_content"
@@ -14,10 +15,12 @@
         android:layout_weight="1">
 
         <ImageView
+            android:id="@+id/imgView_msg"
             android:layout_width="60px"
             android:layout_height="60px"
-            android:src="@drawable/msg_btn"/>
+            android:src="@drawable/contact_btn"/>
         <TextView
+            android:id="@+id/bottom_Text_msg"
             android:layout_marginTop="10px"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,6 +30,7 @@
     </LinearLayout>
     <!--联系人-->
     <LinearLayout
+        android:id="@+id/LinOut_contact"
         android:layout_width="60px"
         android:layout_marginTop="20px"
         android:layout_height="wrap_content"
@@ -35,10 +39,12 @@
         android:layout_weight="1">
 
         <ImageView
+            android:id="@+id/imgView_contact"
             android:layout_width="60px"
             android:layout_height="60px"
-            android:src="@drawable/contacts_btn"/>
+            android:src="@drawable/msg_btn"/>
         <TextView
+            android:id="@+id/bottom_Text_contact"
             android:layout_marginTop="10px"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,6 +54,7 @@
     </LinearLayout>
     <!--朋友圈-->
     <LinearLayout
+        android:id="@+id/LinOut_friend"
         android:layout_width="60px"
         android:layout_marginTop="20px"
         android:layout_height="wrap_content"
@@ -56,11 +63,13 @@
         android:layout_weight="1">
 
         <ImageView
+            android:id="@+id/imgView_friend"
             android:layout_width="60px"
             android:layout_height="60px"
             android:src="@drawable/friend_btn"/>
 
         <TextView
+            android:id="@+id/bottom_Text_friend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10px"

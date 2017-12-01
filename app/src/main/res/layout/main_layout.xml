@@ -8,11 +8,15 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 </com.example.wechart.TitleLayout>
-<FrameLayout
+
+<android.support.v4.view.ViewPager
+    android:id="@+id/viewPager_main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_weight="1">
+    android:layout_weight="1"
+    android:background="#ffffff">
+</android.support.v4.view.ViewPager>
 
-</FrameLayout>
+
     <include layout="@layout/bottom_bar"/>
 </LinearLayout>
