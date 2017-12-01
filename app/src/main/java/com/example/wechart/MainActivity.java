@@ -37,6 +37,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ListView listView;
     private FruitAdapter fruitAdapter;
 
+    private List<Fruit> fruitListMsg = new ArrayList<>();
+    private ListView listViewMsg;
+    private FruitAdapterMsg fruitAdapterMsg;
+
 
 
 
@@ -60,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         initView();
         initFruits();
+        initFruitsMsg();
         initEvent();
 
 
@@ -89,6 +94,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         View page_01 = View.inflate(MainActivity.this,R.layout.table01,null);
         View page_02 = View.inflate(MainActivity.this,R.layout.table02,null);
         View page_03 = View.inflate(MainActivity.this,R.layout.table03,null);
+
+        listViewMsg=(ListView)page_01.findViewById(R.id.list_view_msg);
+        FruitAdapterMsg fruitAdapterMsg = new FruitAdapterMsg(MainActivity.this,R.layout.fruit_item_msg,fruitListMsg);
+        listViewMsg.setAdapter(fruitAdapterMsg);
 
         listView=(ListView)page_02.findViewById(R.id.list_view);
         FruitAdapter fruitAdapter = new FruitAdapter(MainActivity.this, R.layout.fruit_item, fruitList);
@@ -172,27 +181,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     private void initFruits(){
         for (int i = 0;i<2;i++){
-            Fruit apple = new Fruit("APPLE",R.mipmap.apple_pic);
-            fruitList.add(apple);
-            Fruit banana = new Fruit("Banana",R.mipmap.banana_pic);
-            fruitList.add(banana);
-            Fruit orange = new Fruit("orange",R.mipmap.orange_pic);
-            fruitList.add(orange);
-            Fruit watermelon = new Fruit("Watermelon",R.mipmap.watermelon_pic);
-            fruitList.add(watermelon);
-            Fruit pear = new Fruit("Pear",R.mipmap.pear_pic);
-            fruitList.add(pear);
-            Fruit grap = new Fruit("Grap",R.mipmap.grape_pic);
-            fruitList.add(grap);
-            Fruit pineapple = new Fruit("Prinapple",R.mipmap.pineapple_pic);
-            fruitList.add(pineapple);
-            Fruit strawberry = new Fruit("Strawberry",R.mipmap.strawberry_pic);
-            fruitList.add(strawberry);
-            Fruit cherry = new Fruit("Cherry",R.mipmap.cherry_pic);
-            fruitList.add(cherry);
-            Fruit mango = new Fruit("Mango",R.mipmap.mango_pic);
-            fruitList.add(mango);
+            Fruit qinghuashi = new Fruit("青花石",R.mipmap.qinghuashi_pic);
+            fruitList.add(qinghuashi);
+            Fruit waipo = new Fruit("外婆",R.mipmap.waipo_pic);
+            fruitList.add(waipo);
+            Fruit huyuan = new Fruit("胡园",R.mipmap.huyuan_pic);
+            fruitList.add(huyuan);
+            Fruit laowang = new Fruit("老王",R.mipmap.laowang_pic);
+            fruitList.add(laowang);
+            Fruit laoba = new Fruit("老爸",R.mipmap.laoba_pic);
+            fruitList.add(laoba);
+            Fruit laoxiang = new Fruit("老乡",R.mipmap.laoxiang_pic);
+            fruitList.add(laoxiang);
+            Fruit ge = new Fruit("哥",R.mipmap.ge_pic);
+            fruitList.add(ge);
+            Fruit ma = new Fruit("妈",R.mipmap.ma_pic);
+            fruitList.add(ma);
+            Fruit waigong = new Fruit("外公",R.mipmap.waigong_pic);
+            fruitList.add(waigong);
+            Fruit doudou = new Fruit("豆豆",R.mipmap.doudou_pic);
+            fruitList.add(doudou);
         }
+    }
+    private void initFruitsMsg(){
+
+            Fruit qinghuashi = new Fruit("青花石",R.mipmap.qinghuashi_pic);
+            fruitListMsg.add(qinghuashi);
+            Fruit huyuan = new Fruit("胡园",R.mipmap.huyuan_pic);
+            fruitListMsg.add(huyuan);
+            Fruit ge = new Fruit("哥",R.mipmap.ge_pic);
+            fruitListMsg.add(ge);
+            Fruit doudou = new Fruit("豆豆",R.mipmap.doudou_pic);
+            fruitListMsg.add(doudou);
+
     }
 
 
