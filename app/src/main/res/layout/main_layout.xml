@@ -4,10 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
    >
-<com.example.wechart.TitleLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-</com.example.wechart.TitleLayout>
+<!--这是使用自定义控件的代码，自定义控件为TitleLayout.claaa在这里没有使用而是直接引入了-->
+<!--<com.example.wechart.TitleLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content">-->
+<!--</com.example.wechart.TitleLayout>-->
+<!--没有使用控件，而是直接引入了布局，因为在手机上控件的跳转回闪退-->
+    <include layout="@layout/title_bar"/>
 
 <android.support.v4.view.ViewPager
     android:id="@+id/viewPager_main"

@@ -9,10 +9,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,9 +45,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ListView listViewMsg;
     private FruitAdapterMsg fruitAdapterMsg;
 
+    private Button searchButton;
 
 
 
+//oncreate函数
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -71,14 +75,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
-
+//初始化各个时间
     private void initEvent(){
         LinOut_Msg.setOnClickListener(this);
         LinOut_Contact.setOnClickListener(this);
         LinOut_Friend.setOnClickListener(this);
         viewPager.addOnPageChangeListener(this);
     }
-
+//拿到各个View组件ID
     private void initView(){
         this.LinOut_Msg=(LinearLayout)findViewById(R.id.LinOut_msg);
         this.LinOut_Contact=(LinearLayout)findViewById(R.id.LinOut_contact);
@@ -97,6 +101,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         View page_02 = View.inflate(MainActivity.this,R.layout.table02,null);
         View page_03 = View.inflate(MainActivity.this,R.layout.table03,null);
 
+        //搜索按钮没有用TitleLayout的自定义控件，自定义控件导致有可能导致活动结束
+        //只在一个活动中使用自定义布局 直接在MainLayout中引入了
+        searchButton = (Button)findViewById(R.id.title_btn_search);
+        searchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"搜索用户",Toast.LENGTH_SHORT).show();
+                Intent intent =  new Intent(MainActivity.this,searchActivity.class);
+               startActivity(intent);
+            }
+        });
+
+        //listview的page1的消息列表点击事件
         listViewMsg=(ListView)page_01.findViewById(R.id.list_view_msg);
         FruitAdapterMsg fruitAdapterMsg = new FruitAdapterMsg(MainActivity.this,R.layout.fruit_item_msg,fruitListMsg);
         listViewMsg.setAdapter(fruitAdapterMsg);
@@ -108,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intentToSendMsg);
             }
         });
-
+        //设置page2的联系人列表。
         listView=(ListView)page_02.findViewById(R.id.list_view);
         FruitAdapter fruitAdapter = new FruitAdapter(MainActivity.this, R.layout.fruit_item, fruitList);
         listView.setAdapter(fruitAdapter);
@@ -131,6 +148,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TextV_Contact.setTextColor(0xffcccccc);
         TextV_Friends.setTextColor(0xffcccccc);
     }
+    //统一设置了bottom菜单的点击事件
     @Override
     public void onClick(View v) {
         restartButton();
@@ -161,7 +179,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onPageScrolled(int arg0, float arg1, int arg2) {
 
     }
-
+    //view的滑动事件改编bottom颜色
     @Override
     public void onPageSelected(int arg0) {
         restartButton();
@@ -189,6 +207,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onPageScrollStateChanged(int arg0) {
 
     }
+    //初始化联系人数据
     private void initFruits(){
         for (int i = 0;i<2;i++){
             Fruit qinghuashi = new Fruit("青花石",R.mipmap.qinghuashi_pic);
@@ -213,6 +232,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             fruitList.add(doudou);
         }
     }
+    //初始化消息列表的联系人数据
     private void initFruitsMsg(){
 
             Fruit qinghuashi = new Fruit("青花石",R.mipmap.qinghuashi_pic);

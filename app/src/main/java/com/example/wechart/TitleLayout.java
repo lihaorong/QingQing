@@ -16,10 +16,11 @@ import android.widget.Toast;
  */
 
 public class TitleLayout extends LinearLayout {
+     Button btn_search;
     public TitleLayout(final Context context , AttributeSet attrs){
         super(context,attrs);
         LayoutInflater.from(context).inflate(R.layout.title_bar,this);
-        Button btn_search = (Button)findViewById(R.id.title_btn_search);
+       btn_search = (Button)findViewById(R.id.title_btn_search);
 
         btn_search.setOnClickListener(new OnClickListener() {
             @Override
