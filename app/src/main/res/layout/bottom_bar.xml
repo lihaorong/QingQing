@@ -18,14 +18,14 @@
             android:id="@+id/imgView_msg"
             android:layout_width="60px"
             android:layout_height="60px"
-            android:src="@drawable/contact_btn"/>
+            android:src="@drawable/msg_btn_press"/>
         <TextView
             android:id="@+id/bottom_Text_msg"
             android:layout_marginTop="10px"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="消息"
-            android:textColor="#d3d1d1"/>
+            android:textColor="#1f9e34"/>
 
     </LinearLayout>
     <!--联系人-->
@@ -42,7 +42,7 @@
             android:id="@+id/imgView_contact"
             android:layout_width="60px"
             android:layout_height="60px"
-            android:src="@drawable/msg_btn"/>
+            android:src="@drawable/contact_btn"/>
         <TextView
             android:id="@+id/bottom_Text_contact"
             android:layout_marginTop="10px"
