@@ -2,10 +2,12 @@ package com.example.wechart;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -37,6 +39,8 @@ public class RegisterActivity extends AppCompatActivity {
         Button BtnRegister = (Button)findViewById(R.id.register_btn_confirm);
         editTextUserName = (EditText)findViewById(R.id.register_username_text);
         editTextPassword = (EditText)findViewById(R.id.register_password_text);
+        editTextPassword.setTypeface(Typeface.DEFAULT);
+        editTextPassword.setTransformationMethod(new PasswordTransformationMethod());
         BtnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

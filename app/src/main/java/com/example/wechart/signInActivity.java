@@ -2,10 +2,12 @@ package com.example.wechart;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -48,6 +50,9 @@ public class signInActivity extends AppCompatActivity {
         Button BtnSignIn = (Button)findViewById(R.id.btn_signin);
         final EditText signUserName = (EditText)findViewById(R.id.username_text);
         final EditText signPassword = (EditText)findViewById(R.id.password_text);
+        //修改密码框提示的字体格式
+        signPassword.setTypeface(Typeface.DEFAULT);
+        signPassword.setTransformationMethod(new PasswordTransformationMethod());
         BtnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
