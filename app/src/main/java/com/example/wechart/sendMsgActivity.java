@@ -49,8 +49,9 @@ public class sendMsgActivity extends AppCompatActivity {
         BackToMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentToMain = new Intent(sendMsgActivity.this,MainActivity.class);
-                startActivity(intentToMain);
+                finish();
+//                Intent intentToMain = new Intent(sendMsgActivity.this,MainActivity.class);
+//                startActivity(intentToMain);
             }
         });
 
