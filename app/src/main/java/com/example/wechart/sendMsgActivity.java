@@ -78,11 +78,11 @@ public class sendMsgActivity extends AppCompatActivity {
 
     }
     private void initMsgs(){
-        Msg msg1 = new Msg("Hello guy",Msg.TYPE_RECEIVED);
+        Msg msg1 = new Msg("老公",Msg.TYPE_RECEIVED);
         msgList.add(msg1);
-        Msg msg2 = new Msg("Hos is going",Msg.TYPE_RECEIVED);
+        Msg msg2 = new Msg("今天那个过去了",Msg.TYPE_RECEIVED);
         msgList.add(msg2);
-        Msg msg3 = new Msg("This is Stone-yu",Msg.TYPE_SENT);
+        Msg msg3 = new Msg("就来，等。。。我。。。",Msg.TYPE_SENT);
         msgList.add(msg3);
     }
 }

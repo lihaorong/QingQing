@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="200px"
-    android:background="@drawable/title_bar"
+    android:background="@drawable/img_title_bar"
     android:gravity="right"
     >
 
@@ -14,7 +14,7 @@
         android:layout_marginLeft="13px"
         android:layout_marginTop="30px"
         android:gravity="center"
-        android:text="WeChat"
+        android:text="小晴晴"
         android:textColor="#fff"
         android:textSize="20dp"
 

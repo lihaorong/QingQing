@@ -210,39 +210,51 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //初始化联系人数据
     private void initFruits(){
         for (int i = 0;i<2;i++){
-            Fruit qinghuashi = new Fruit("青花石",R.mipmap.qinghuashi_pic);
-            fruitList.add(qinghuashi);
-            Fruit waipo = new Fruit("外婆",R.mipmap.waipo_pic);
-            fruitList.add(waipo);
-            Fruit huyuan = new Fruit("胡园",R.mipmap.huyuan_pic);
-            fruitList.add(huyuan);
-            Fruit laowang = new Fruit("老王",R.mipmap.laowang_pic);
-            fruitList.add(laowang);
-            Fruit laoba = new Fruit("老爸",R.mipmap.laoba_pic);
-            fruitList.add(laoba);
-            Fruit laoxiang = new Fruit("老乡",R.mipmap.laoxiang_pic);
-            fruitList.add(laoxiang);
-            Fruit ge = new Fruit("哥",R.mipmap.ge_pic);
-            fruitList.add(ge);
-            Fruit ma = new Fruit("妈",R.mipmap.ma_pic);
-            fruitList.add(ma);
-            Fruit waigong = new Fruit("外公",R.mipmap.waigong_pic);
-            fruitList.add(waigong);
-            Fruit doudou = new Fruit("豆豆",R.mipmap.doudou_pic);
-            fruitList.add(doudou);
+            Fruit laopo = new Fruit("老婆",R.mipmap.img_two);
+            fruitList.add(laopo);
+            Fruit mishu = new Fruit("秘书",R.mipmap.img_two);
+            fruitList.add(mishu);
+            Fruit xiaosan = new Fruit("小三",R.mipmap.img_two);
+            fruitList.add(xiaosan);
+            Fruit xiaoqi = new Fruit("小妾",R.mipmap.img_two);
+            fruitList.add(xiaoqi);
+            Fruit renqi = new Fruit("人妻",R.mipmap.img_two);
+            fruitList.add(renqi);
+            Fruit ernai = new Fruit("二奶",R.mipmap.img_two);
+            fruitList.add(ernai);
+            Fruit xiaoyizi = new Fruit("小姨子",R.mipmap.img_two);
+            fruitList.add(xiaoyizi);
+            Fruit xiaolaopo = new Fruit("小老婆",R.mipmap.img_two);
+            fruitList.add(xiaolaopo);
+            Fruit nvshangci = new Fruit("女上司",R.mipmap.img_two);
+            fruitList.add(nvshangci);
+            Fruit nvxiashu = new Fruit("女下属",R.mipmap.img_two);
+            fruitList.add(nvxiashu);
         }
     }
     //初始化消息列表的联系人数据
     private void initFruitsMsg(){
 
-            Fruit qinghuashi = new Fruit("青花石",R.mipmap.qinghuashi_pic);
-            fruitListMsg.add(qinghuashi);
-            Fruit huyuan = new Fruit("胡园",R.mipmap.huyuan_pic);
-            fruitListMsg.add(huyuan);
-            Fruit ge = new Fruit("哥",R.mipmap.ge_pic);
-            fruitListMsg.add(ge);
-            Fruit doudou = new Fruit("豆豆",R.mipmap.doudou_pic);
-            fruitListMsg.add(doudou);
+            Fruit laopo = new Fruit("老婆",R.mipmap.img_two);
+            fruitListMsg.add(laopo);
+            Fruit mishu = new Fruit("秘书",R.mipmap.img_two);
+            fruitListMsg.add(mishu);
+            Fruit xiaosan = new Fruit("小三",R.mipmap.img_two);
+            fruitListMsg.add(xiaosan);
+            Fruit xiaoqi = new Fruit("小妾",R.mipmap.img_two);
+            fruitListMsg.add(xiaoqi);
+            Fruit renqi = new Fruit("人妻",R.mipmap.img_two);
+            fruitListMsg.add(renqi);
+            Fruit ernai = new Fruit("二奶",R.mipmap.img_two);
+            fruitListMsg.add(ernai);
+            Fruit xiaoyizi = new Fruit("小姨子",R.mipmap.img_two);
+            fruitListMsg.add(xiaoyizi);
+            Fruit xiaolaopo = new Fruit("小老婆",R.mipmap.img_two);
+            fruitListMsg.add(xiaolaopo);
+            Fruit nvshangci = new Fruit("女上司",R.mipmap.img_two);
+            fruitListMsg.add(nvshangci);
+            Fruit nvxiashu = new Fruit("女下属",R.mipmap.img_two);
+            fruitListMsg.add(nvxiashu);
 
     }
 
